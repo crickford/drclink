@@ -1,0 +1,17 @@
+# Historical packaged binaries stay available locally; commit source by default.
+tools/windows-probe/app/
+tools/windows-probe/runtime/
+**/bin/
+**/obj/
+**/rebuilt/
+**/logs/
+**/results/
+*.etl
+*.cab
+# Future reproducibly fetched upstream worktrees and build output.
+external/
+third_party/checkouts/
+build/
+dist/
+# Local pairing secrets belong outside tracked source.
+pairing-private/

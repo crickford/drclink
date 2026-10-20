@@ -1,0 +1,220 @@
+{
+  "variant": "lightweight-source-only",
+  "files": [
+    {
+      "path": ".gitignore",
+      "size_bytes": 381,
+      "sha256": "8f576d4a598cb6ae94672b3136222a57147c82d1ad24c96213baa39415a87fb2"
+    },
+    {
+      "path": "AGENTS.md",
+      "size_bytes": 4274,
+      "sha256": "21a4f010e0b2b43bab2e249be3d3de8672c5d5acaed3686ad19b8968ee969d69"
+    },
+    {
+      "path": "CODEX_START.md",
+      "size_bytes": 1850,
+      "sha256": "d44a46863bad7db9f40022cc34d32e8c43e0ae3dbae17b75048a4ab1978b03e7"
+    },
+    {
+      "path": "HANDOFF_VALIDATION.md",
+      "size_bytes": 1577,
+      "sha256": "65b56be4efe2654fb2079cf7482520923b7def7b13e3230e179353190157fc8d"
+    },
+    {
+      "path": "LITE_PACKAGE.md",
+      "size_bytes": 1112,
+      "sha256": "c2b1dc4c9d34d3218c7c8c9abdc39cd879a9f0ad5b19a4f63772faba2f418cf5"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 4121,
+      "sha256": "f75fe8ef3817623faa12da0e8831dd6a1aabc4c0411eb1a393828101950055cb"
+    },
+    {
+      "path": "docs/NEXT_PI_MILESTONE.md",
+      "size_bytes": 6858,
+      "sha256": "ca6c7e707ce13ae5bece5d6e70b10cba0d57167bf0b7c7b1e009d617b992a81a"
+    },
+    {
+      "path": "docs/PI_FIRMWARE_RESEARCH.md",
+      "size_bytes": 26644,
+      "sha256": "e4b528b67d15d7b8372b5a3ade5cf39893299c7e42cecb9ec9f393151995d115"
+    },
+    {
+      "path": "docs/PROJECT_CONTEXT.md",
+      "size_bytes": 6120,
+      "sha256": "596eb95ac739dbeedf413f6e133520625e270f579ed105e2fcd474d282657295"
+    },
+    {
+      "path": "docs/SOURCES.md",
+      "size_bytes": 4076,
+      "sha256": "c65c56df7937631c5be196ff63df0d258cb216879b75e35c01d94dc95a4e7172"
+    },
+    {
+      "path": "docs/STATUS_AND_DECISIONS.md",
+      "size_bytes": 5307,
+      "sha256": "bd91432f312cf2f7b2965e2c9431990a9fe8a24fd64769b4422073ceb6b50617"
+    },
+    {
+      "path": "docs/TOOLS_AND_VALIDATION.md",
+      "size_bytes": 4966,
+      "sha256": "dce103130468791069705b2261a5e66b4671b39d15d3eb4ad726f004f2556c4e"
+    },
+    {
+      "path": "docs/WINDOWS_HISTORY.md",
+      "size_bytes": 6979,
+      "sha256": "d4dc73304a8f5dc9776e7d1caaf41cbe75495c0f9b0a923e15b975f273726192"
+    },
+    {
+      "path": "evidence/README.md",
+      "size_bytes": 1448,
+      "sha256": "3b4262bb775814f4736d2dc4e8438532c261ecf1ce19c07b855f4a83078a8e8b"
+    },
+    {
+      "path": "evidence/user-reported-hardware-and-service.md",
+      "size_bytes": 2617,
+      "sha256": "29c0dbd0d417933acba9be5d65853cde309b339b19c3581cb054b741f99c2e7f"
+    },
+    {
+      "path": "evidence/windows-open-v0.1.0-events.jsonl",
+      "size_bytes": 1853,
+      "sha256": "5cea99a8955ecbf8c5cd3feb9493a8164c3b30751daf1043eccc0f0b2cb0d123"
+    },
+    {
+      "path": "evidence/windows-open-v0.1.0-summary.json",
+      "size_bytes": 673,
+      "sha256": "846c86adedf969e77668a27610a33a6200b4a6e5180e2cf26561e8b8f1c12278"
+    },
+    {
+      "path": "evidence/windows-open-v0.1.1-summary.json",
+      "size_bytes": 973,
+      "sha256": "a5f2a9cbd846b27528461779a475f425bf97e1a5a8868750542539c119f87ff4"
+    },
+    {
+      "path": "evidence/windows-protected-v0.1.0-summary.json",
+      "size_bytes": 705,
+      "sha256": "3549943a2d9f39e50cb455534203149497fee24ca616abeec5f1067c9f1a6f3d"
+    },
+    {
+      "path": "tools/windows-driver-boundary/Collect-WdiBoundary.ps1",
+      "size_bytes": 6215,
+      "sha256": "3a36aed0b5cb0e98124e540c763e2fa29b89d75440feefda0050cf21bf5ac399"
+    },
+    {
+      "path": "tools/windows-driver-boundary/README.md",
+      "size_bytes": 9971,
+      "sha256": "a88ed2dc1ae0ba34ce788dec6a8f61b0e94e1a3200a398de48cee857529b5083"
+    },
+    {
+      "path": "tools/windows-driver-boundary/SymbolIdentity.cs",
+      "size_bytes": 3937,
+      "sha256": "0aed34b00cdc2dd2939d905602f07b2f5dc03f545ff6a60b3dfa4753437d4ed5"
+    },
+    {
+      "path": "tools/windows-driver-boundary/VALIDATION.md",
+      "size_bytes": 1391,
+      "sha256": "e947f40c0c947264edc1cfeecb5805de2fcea8ad14a332ffd57367c9bcfb78ab"
+    },
+    {
+      "path": "tools/windows-probe/CHANGELOG.md",
+      "size_bytes": 1104,
+      "sha256": "9847d530576db73e9676f6de47577ba56be567c40babe803c7f6b24427115bca"
+    },
+    {
+      "path": "tools/windows-probe/README.md",
+      "size_bytes": 11162,
+      "sha256": "95af64f5066568a328699d5e9762193431b2f13d57a093ddb576b60eb4237390"
+    },
+    {
+      "path": "tools/windows-probe/Run-Probe.cmd",
+      "size_bytes": 669,
+      "sha256": "9ca8032436e351af7d4ba88e5eb83e1a012f417dcf14cc0e1e52a7f723fafa87"
+    },
+    {
+      "path": "tools/windows-probe/THIRD-PARTY-NOTICES.md",
+      "size_bytes": 875,
+      "sha256": "0127c6c8772289127606e5b55ad76aa1e9af1e361bb2605ca0f0d08fee763381"
+    },
+    {
+      "path": "tools/windows-probe/VALIDATION.txt",
+      "size_bytes": 1954,
+      "sha256": "f2316907411840a410c44d62f60d25852f6d104522bfbd6c9a842c8273f10585"
+    },
+    {
+      "path": "tools/windows-probe/notices/Microsoft.Windows.SDK.NET.Ref.nuspec",
+      "size_bytes": 1284,
+      "sha256": "625e7b9e6768eea9d38927df9d70a03adfc062cecaa57c100ed8a524cb9ac8bb"
+    },
+    {
+      "path": "tools/windows-probe/scripts/Build.ps1",
+      "size_bytes": 424,
+      "sha256": "631505edd7803d5d1ed4365bc833f6a20b9e92264c4836522986c582c5d012fa"
+    },
+    {
+      "path": "tools/windows-probe/scripts/Capture-WlanTrace.ps1",
+      "size_bytes": 1668,
+      "sha256": "9daa545f3e39c91d305304a4199495d9e035ade4908b3cb238fe5714029f7d07"
+    },
+    {
+      "path": "tools/windows-probe/src/DrcLink.Probe/DrcLink.Probe.csproj",
+      "size_bytes": 566,
+      "sha256": "21f0ff6170f55dc78a54152c5bcb12880a169be07bd07526b3b722f62a421de4"
+    },
+    {
+      "path": "tools/windows-probe/src/DrcLink.Probe/Inventory.cs",
+      "size_bytes": 2067,
+      "sha256": "a7c4f4ef77a1a2a7f3a94ed4aa3dbe05bf5d78ff4160c1f985feeb8b0fa4291a"
+    },
+    {
+      "path": "tools/windows-probe/src/DrcLink.Probe/LegacySettingsAbi.cs",
+      "size_bytes": 1540,
+      "sha256": "e9f4940e6218d4f37ccfc4709860b6c77e2f091631f8c02f40922dbdaefa5bac"
+    },
+    {
+      "path": "tools/windows-probe/src/DrcLink.Probe/NativeOpenProbe.cs",
+      "size_bytes": 2712,
+      "sha256": "ddea2f88c0cb7e58a03491d70263cd3d5ddd8ea2bb86a32ff4db0a642875212b"
+    },
+    {
+      "path": "tools/windows-probe/src/DrcLink.Probe/Options.cs",
+      "size_bytes": 2234,
+      "sha256": "efae4db7828b5f37f351dadf8aea7bdc921e5af7d808f3f73d8c8e99fc431d52"
+    },
+    {
+      "path": "tools/windows-probe/src/DrcLink.Probe/ProbeLog.cs",
+      "size_bytes": 2061,
+      "sha256": "78f4e0a72b2e6b6feea85a49bcf3b36fb5f16636fd7b3a997db6288ef2176d4c"
+    },
+    {
+      "path": "tools/windows-probe/src/DrcLink.Probe/Program.cs",
+      "size_bytes": 2308,
+      "sha256": "028de84450af87618ba7e86c13a726348117dcff21f3e44adace67fb2757e827"
+    },
+    {
+      "path": "tools/windows-probe/src/DrcLink.Probe/PublicationTracker.cs",
+      "size_bytes": 1362,
+      "sha256": "6b22e906fbcdc5037acc9ad38bda57812fe4c83509b0615b7bf14aca6877d690"
+    },
+    {
+      "path": "tools/windows-probe/src/DrcLink.Probe/RadioProbe.cs",
+      "size_bytes": 13561,
+      "sha256": "7f2e4cd9d4efa8fc6ed8533898fddb65c4c225688ccb825e636c775f5f3a4ab4"
+    },
+    {
+      "path": "tools/windows-probe/tests/DrcLink.Probe.Checks/DrcLink.Probe.Checks.csproj",
+      "size_bytes": 649,
+      "sha256": "96aa18f6f0645b8b4971bbe6843e169ff5617d33061d85f2e1f6380cee5f3551"
+    },
+    {
+      "path": "tools/windows-probe/tests/DrcLink.Probe.Checks/FakeLegacySettings.cs",
+      "size_bytes": 2019,
+      "sha256": "066a0daed206dd566ada3f19dc1c3b4c8bedc1117f8a15137a9a625c70feb221"
+    },
+    {
+      "path": "tools/windows-probe/tests/DrcLink.Probe.Checks/Program.cs",
+      "size_bytes": 4447,
+      "sha256": "529fa3ded6fb287a1785a8b3e7c3590c69a00fabc79c6140ae91750cacd6b48e"
+    }
+  ]
+}

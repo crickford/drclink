@@ -1,0 +1,37 @@
+Version 0.1.1. Roslyn C# 12 compilation against .NET 8 and Windows SDK 10.0.19041.56: passed, zero compiler warnings.
+
+PASS: open and protected use distinct SSIDs
+PASS: misspelled open mode never silently becomes protected
+PASS: ambiguous security options are rejected
+PASS: duration is bounded
+PASS: longer than 300 seconds is rejected
+PASS: SSID limit counts UTF-8 bytes
+PASS: 32-byte UTF-8 SSID accepted
+PASS: read-only inspect cannot accidentally enable an experiment
+PASS: Created is not successful publication
+PASS: Started resolves initial wait
+PASS: abort after startup remains a test failure
+PASS: startup rejection does not become success
+PASS: intentional cleanup is not a radio failure
+PASS: unexpected stop during observation is reported
+PASS: configuration failure never calls Stop on an unstarted publisher
+PASS: pending startup is stopped during cleanup
+PASS: started publisher is stopped during cleanup
+PASS: already aborted publisher needs no Stop call
+PASS: already stopped publisher needs no Stop call
+PASS: ABI setter receives an actual null pointer
+PASS: native E_POINTER is preserved without conversion to a managed exception
+PASS: native HRESULT is serialized exactly
+PASS: native setter success is preserved
+PASS: native getter can confirm a null readback
+PASS: getter failure is preserved for separate interpretation
+PASS: non-null readback is exposed rather than assumed to be open authentication
+PASS: null interface pointer is rejected before unmanaged invocation
+27 checks passed.
+
+Windows execution, Intel radio and native WinRT method results: not tested in this Linux environment.
+ABI IID and getter/setter slots verified against the installed Windows SDK projection metadata and IL.
+Native test double exercises actual function-pointer calls, not Windows implementation behaviour.
+
+Packaged CLI checks passed: version 0.1.1 --help exits 0; non-Windows inspect exits 3; invalid mode exits 2.
+Project XML syntax verified.

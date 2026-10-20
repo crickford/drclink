@@ -1,0 +1,30 @@
+{
+  "version": "0.1.1",
+  "requestedMode": "open",
+  "Ssid": "DrcLink-Open",
+  "exitCode": 11,
+  "result": "open-native-setter-rejected",
+  "failedOrLastStage": "native-null-passphrase-probe",
+  "apiReportedStarted": false,
+  "passphraseReadbackWasNull": null,
+  "nativeOpenProbe": {
+    "QueryInterfaceHresult": "0x00000000",
+    "SetterWasInvoked": true,
+    "SetterHresult": "0x80004003",
+    "GetterHresult": null,
+    "GetterReturnedNull": null,
+    "SettingConfirmedNull": false
+  },
+  "failure": null,
+  "startWasAttempted": false,
+  "lastPublisherStatus": "Created",
+  "lastPublisherError": null,
+  "cleanupStatus": "not-needed-never-started",
+  "connectionRequestCount": 0,
+  "attachedPeerCount": 0,
+  "actualBand": "not-measured",
+  "actualAuthentication": "not-verified-over-air",
+  "gamePadPaired": false,
+  "nintendoHandshakeImplemented": false,
+  "interpretation": "Publication and API visibility experiment only. Exit 0 is not successful GamePad pairing."
+}

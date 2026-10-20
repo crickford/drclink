@@ -1,0 +1,20 @@
+{
+  "version": "0.1.0",
+  "requestedMode": "protected",
+  "Ssid": "DrcLink-Probe",
+  "exitCode": 0,
+  "result": "publication-observation-complete",
+  "failedOrLastStage": "observe-running-publisher",
+  "apiReportedStarted": true,
+  "passphraseReadbackWasNull": null,
+  "lastPublisherStatus": "Stopped",
+  "lastPublisherError": "Success",
+  "cleanupStatus": "terminal-state-observed",
+  "connectionRequestCount": 1,
+  "attachedPeerCount": 1,
+  "actualBand": "not-measured",
+  "actualAuthentication": "not-verified-over-air",
+  "gamePadPaired": false,
+  "nintendoHandshakeImplemented": false,
+  "interpretation": "Publication and API visibility experiment only. Exit 0 is not successful GamePad pairing."
+}
