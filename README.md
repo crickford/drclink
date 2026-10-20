@@ -4,7 +4,7 @@
 
 Build software that lets a real Wii U GamePad display PC games, play audio, and send controller/touch input to a Windows PC, without a Wii U console, including during pairing. The latest direction is a Raspberry Pi 4 Model B using its **onboard Wi-Fi** for the GamePad and USB Ethernet for the Windows connection.
 
-This lightweight package retains documentation, research, evidence, diagnostic source and tests. Compiled Windows binaries and the bundled .NET runtime are omitted. It does not include Nexmon/Barista checkouts, proprietary Pi firmware, a Pi firmware patch, or a finished streaming application. Fetch the pinned upstream sources when needed. You do not need access to the original chat or its filesystem paths.
+This repository retains documentation, research, evidence, diagnostic source and tests. Compiled Windows binaries and the bundled .NET runtime are omitted. The Pi work now includes a build-only Nexmon ABI prototype and a host sampler; its hardware reader remains disabled pending verification. Nexmon/Barista checkouts, proprietary Pi firmware and build artifacts stay outside tracked source. There is no finished streaming application.
 
 ## Start in Codex
 
@@ -28,7 +28,7 @@ Read in this order:
 
 ## Immediate continuation
 
-The next task is to prepare a **read-only 64-bit radio TSF accessor** for one pinned Pi firmware target, with a host-side measurement tool and reproducible build instructions. First obtain the actual Pi board/kernel/firmware inventory; none has been supplied yet. Independent source inspection, ABI design and build preparation can continue while that information is missing.
+Start with [Pi setup and remote access](docs/PI_SETUP.md), then collect the actual board/kernel/firmware inventory. [The TSF prototype](tools/pi-tsf/README.md) includes the versioned command, sampler, offline checks and build instructions. It has been compiled locally, but its hardware reader is disabled because ROM/layout/clock-state verification remains incomplete. No firmware has been loaded and no Pi hardware result has been received.
 
 This clock prototype will not establish Nintendo-compatible security advertisements, association, pairing or streaming. Those are distinct milestones. “Read-only” describes what the proposed command does; loading a firmware patch is still a hardware-changing deployment step.
 
@@ -36,10 +36,11 @@ This clock prototype will not establish Nintendo-compatible security advertiseme
 
 - [tools/windows-probe](tools/windows-probe/README.md): DrcLink.Probe 0.1.1 source and tests. Build with the .NET 8 SDK on Windows using `scripts/Build.ps1`; run the executable in `rebuilt`. The portable application/runtime are omitted. It is a Wi-Fi API feasibility probe, not GamePad software.
 - [tools/windows-driver-boundary](tools/windows-driver-boundary/README.md): WDI/NDIS observation collector and symbol reader. Its Windows hardware run is still pending.
+- [tools/pi-tsf](tools/pi-tsf/README.md): minimal Nexmon ABI prototype, source audit, bounded sampler, inventory collector and offline checks. See its explicit source/build/hardware limits.
 - [evidence](evidence/README.md): copies of the uploaded Windows results plus user-reported hardware/service observations.
 
 The older tool READMEs describe experiments as they were designed. For which ones have already run, use [the status document](docs/STATUS_AND_DECISIONS.md). Do not automatically repeat the protected/open tests or restart Embedded Mode troubleshooting.
 
 ## Snapshot and portability
 
-Handoff prepared 19 October 2026, America/Los_Angeles. Raw log timestamps are UTC. The project has no configured remote Git repository and no application build/deployment pipeline beyond the included diagnostics. You may initialize a repository in the extracted folder. `MANIFEST.json` inventories included files and SHA-256 hashes. Runtime/third-party notices remain alongside the Windows tools.
+Handoff prepared 19 October 2026, America/Los_Angeles. Raw log timestamps are UTC. The repository remote is now `https://github.com/crickford/drclink.git`; the original handoff was imported on branch `work`. `MANIFEST.json` preserves the original package inventory/hashes and is not an inventory of later development. Runtime/third-party notices remain alongside the Windows tools. TSF source/build validation is recorded separately under `tools/pi-tsf` and `evidence/pi-tsf-offline-2026-10-19`.

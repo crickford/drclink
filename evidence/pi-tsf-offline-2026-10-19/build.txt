@@ -1,0 +1,87 @@
+{
+  "nexmon_commit": "68720406f54ff16cad28fd3c51f2392aefad9fb7",
+  "base_sha256": "7fe369f7fdfded9eeceb8e438f7346e58634741b326d0715ad1b15275e6fa3a4",
+  "base_size": 624943,
+  "ram_start": "0x198000",
+  "ram_size": "0xc8000",
+  "hook_address": "0x20e264",
+  "original_hook_pointer": "0x203b9",
+  "reader_rom_address": "0x9c76c",
+  "flashpatch_entries": 255,
+  "reader_entry_overlaps": [],
+  "command": 430,
+  "reader_enabled": false,
+  "clock_domain_verified": false,
+  "blockers": [
+    "Actual Pi board/chip/kernel/loaded firmware/NVRAM/CLM inventory absent",
+    "Clean BCM43455c0 ROM not supplied; reader instructions not verified",
+    "Shared wlc/hw layout and clock-enabled predicate not verified on target",
+    "AP clock domain and transport behavior require hardware measurement"
+  ]
+}
+make: Entering directory '<NEXMON_ROOT>/buildtools/flash_patch_extractor'
+make: 'fpext' is up to date.
+make: Leaving directory '<NEXMON_ROOT>/buildtools/flash_patch_extractor'
+make: Entering directory '<NEXMON_ROOT>/firmwares/bcm43455c0/7_45_206'
+make: Nothing to be done for 'all'.
+make: Leaving directory '<NEXMON_ROOT>/firmwares/bcm43455c0/7_45_206'
+make: Entering directory '<NEXMON_ROOT>/patches/bcm43455c0/7_45_206/drclink_tsf'
+Makefile:13: warning: overriding recipe for target 'brcmfmac.ko'
+../nexmon/Makefile:59: warning: ignoring old recipe for target 'brcmfmac.ko'
+Makefile:15: warning: overriding recipe for target 'install-firmware'
+../nexmon/Makefile:202: warning: ignoring old recipe for target 'install-firmware'
+Makefile:15: warning: overriding recipe for target 'backup-firmware'
+../nexmon/Makefile:183: warning: ignoring old recipe for target 'backup-firmware'
+
+
+          ###########   ###########   ##########    ##########
+         ############  ############  ############  ############
+         ##            ##            ##   ##   ##  ##        ##
+         ##            ##            ##   ##   ##  ##        ##
+         ###########   ####  ######  ##   ##   ##  ##    ######
+          ###########  ####  #       ##   ##   ##  ##    #    #
+                   ##  ##    ######  ##   ##   ##  ##    #    #
+                   ##  ##    #       ##   ##   ##  ##    #    #
+         ############  ##### ######  ##   ##   ##  ##### ######
+         ###########    ###########  ##   ##   ##   ##########
+
+            S E C U R E   M O B I L E   N E T W O R K I N G
+
+
+                               presents:
+
+              # ###   ###  #   # # ###  ###   ###  # ###
+              ##   # #   #  # #  ##   ##   # #   # ##   #
+              #    # #####   #   #    #    # #   # #    #
+              #    # #      # #  #    #    # #   # #    #
+              #    #  #### #   # #    #    #  ###  #    #
+
+                The C-based Firmware Patching Framework
+
+
+                           !!! WARNING !!!
+    Our software may damage your hardware and may void your hardware’s
+     warranty! You use our tools at your own risk and responsibility
+
+
+  STATISTICS DISABLED to enable: delete <NEXMON_ROOT>/DISABLE_STATISTICS
+  COMPILING src/tsf.c => obj/tsf.o (details: log/compiler.log)
+  COMPILING src/patch.c => obj/patch.o (details: log/compiler.log)
+  COPYING UCODE <NEXMON_ROOT>/firmwares/bcm43455c0/7_45_206/ucode.bin => gen/ucode.bin
+  COMPRESSING UCODE gen/ucode.bin => gen/ucode_compressed.bin
+  GENERATING C FILE gen/ucode_compressed.bin => src/ucode_compressed.c
+  COMPILING src/ucode_compressed.c => obj/ucode_compressed.o (details: log/compiler.log)
+  COMPILING <NEXMON_ROOT>/patches/common/wrapper.c => obj/wrapper.o (details: log/compiler.log)
+  COMPILING <NEXMON_ROOT>/patches/common/objmem.c => obj/objmem.o (details: log/compiler.log)
+  COMPILING <NEXMON_ROOT>/patches/common/ucode_compression_code.c => obj/ucode_compression_code.o (details: log/compiler.log)
+  COMPILING <NEXMON_ROOT>/firmwares/bcm43455c0/7_45_206/flashpatches.c => obj/flashpatches.o (details: log/compiler.log)
+  GENERATING LINKER FILE gen/nexmon.pre => gen/nexmon.ld
+  GENERATING LINKER FILE gen/nexmon.pre => gen/flashpatches.ld
+  GENERATING LINKER FILE gen/memory.ld
+  LINKING OBJECTS => gen/patch.elf (details: log/linker.log, log/linker.err)
+  GENERATING MAKE FILE gen/nexmon.pre => gen/nexmon.mk
+  GENERATING MAKE FILE gen/nexmon.pre => gen/flashpatches.mk
+  APPLYING FLASHPATCHES gen/flashpatches.mk => brcmfmac43455-sdio.bin (details: log/flashpatches.log)
+  APPLYING PATCHES gen/nexmon.mk => brcmfmac43455-sdio.bin (details: log/patches.log)
+make: Leaving directory '<NEXMON_ROOT>/patches/bcm43455c0/7_45_206/drclink_tsf'
+4853ea4df6356115dd45085349d18ead96d735937df9c43b0b8a5a228f787d03  patches/bcm43455c0/7_45_206/drclink_tsf/brcmfmac43455-sdio.bin

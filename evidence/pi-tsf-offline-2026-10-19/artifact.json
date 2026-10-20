@@ -1,0 +1,30 @@
+{
+  "source": {
+    "nexmon_commit": "68720406f54ff16cad28fd3c51f2392aefad9fb7",
+    "base_sha256": "7fe369f7fdfded9eeceb8e438f7346e58634741b326d0715ad1b15275e6fa3a4",
+    "base_size": 624943,
+    "ram_start": "0x198000",
+    "ram_size": "0xc8000",
+    "hook_address": "0x20e264",
+    "original_hook_pointer": "0x203b9",
+    "reader_rom_address": "0x9c76c",
+    "flashpatch_entries": 255,
+    "reader_entry_overlaps": [],
+    "command": 430,
+    "reader_enabled": false,
+    "clock_domain_verified": false,
+    "blockers": [
+      "Actual Pi board/chip/kernel/loaded firmware/NVRAM/CLM inventory absent",
+      "Clean BCM43455c0 ROM not supplied; reader instructions not verified",
+      "Shared wlc/hw layout and clock-enabled predicate not verified on target",
+      "AP clock domain and transport behavior require hardware measurement"
+    ]
+  },
+  "output_sha256": "4853ea4df6356115dd45085349d18ead96d735937df9c43b0b8a5a228f787d03",
+  "output_size": 624943,
+  "ioctl_pointer": "0x22c889",
+  "handler_address": "0x22c888",
+  "reader_symbol_present": false,
+  "hardware_tested": false,
+  "patch_sha256": "1b5035ac121ffb90026a8a98fd2427ecc2ee6ce9e29e1140223ebde3ead18d6a"
+}

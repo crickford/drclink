@@ -16,7 +16,7 @@ Snapshot: 19 October 2026 local time. The original uploaded logs use 16 October 
 | Windows lower-level driver control | Candidate based on documentation | Native WLAN-to-WDI mappings exist; actual filter visibility/control on AX210 unproven |
 | Pi firmware feasibility review | Completed source research | GPT-6 Astra report in `docs/PI_FIRMWARE_RESEARCH.md`; no hardware testing |
 | Pi installed hardware/software inventory | Missing | Do not assume a particular OS, kernel or firmware version is installed |
-| Pi TSF accessor | Proposed | Exact source hooks identified; no patch, build or hardware run performed |
+| Pi TSF accessor | Locally built ABI prototype; actual reader blocked | Minimal pinned Nexmon variant and sampler in `tools/pi-tsf`; reader disabled pending ROM/layout/clock verification. No hardware run |
 | Pi Nintendo RSN and association handling | Unresolved | Source-backed rejection points and reverse-engineering leads, no verified working adaptation |
 | GamePad pairing / media / input integration | Not implemented in this project | No successful GamePad connection on either route |
 
@@ -49,3 +49,40 @@ The user has not supplied Pi inventory or run a project Pi test. Firmware loadin
 ## Updating this file
 
 Append dated results with exact hardware/software versions, commands and evidence paths. Promote a hypothesis to observed only when a corresponding result exists. Keep failed experiments and their narrow interpretations; do not erase them after a later change succeeds.
+
+## 19 October 2026 — bounded TSF source/build continuation
+
+- **User-reported:** A brand-new Pi 4B is available, and wired Ethernet can be
+  connected to the router. No board revision, chip revision, OS/kernel, loaded
+  firmware or SSH endpoint has been received. Provisioning and private remote
+  access instructions are in [PI_SETUP.md](PI_SETUP.md); no extra radio is assumed.
+- **Source-supported:** Re-fetched Nexmon commit
+  `68720406f54ff16cad28fd3c51f2392aefad9fb7`, verified the exact research-image
+  hash, original ioctl pointer `0x203b9` at `0x20e264`, wrapper metadata and 255
+  original flashpatch entries. The shared structs explicitly warn about copied,
+  potentially wrong layouts; no verified hardware-clock predicate or clean
+  BCM43455c0 ROM is present. See `tools/pi-tsf/SOURCE_REVIEW.md` for exact limits.
+- **Decision:** Keep `7_45_206` as an offline research target, not a selected
+  deployment image. The new command's ABI/capabilities work in offline tests,
+  but READ returns `UNVERIFIED_BACKEND` without calling the ROM reader. Do not
+  treat `hw->up` as a clock-enabled guarantee or guess a `clk` offset. There is
+  deliberately no build switch to enable an unverified reader.
+- **Locally tested:** The small standalone Nexmon variant compiles, links and
+  produces a patched image with the pinned GCC 5.4.1/plugin. It excludes the
+  normal monitor/injection/console/UDP hooks and builds no driver. The build
+  uses the existing ucode compression/reclaim layout and relocates original
+  flashpatches. Artifact hashes, offline checks and exact commands are recorded
+  in `tools/pi-tsf/VALIDATION.md` and `evidence/pi-tsf-offline-2026-10-19`.
+- **Locally tested / proposed hardware use:** The standard-library sampler
+  parses the Broadcom nl80211 DCMD reply, retains raw brackets/responses/errors,
+  stops on unavailable capabilities and bounds request deadlines/duration/rate.
+  Fixtures cover malformed buffers, word ordering, stale responses, resets,
+  wraps and rate fits. Actual stock-kernel vendor transport is untested.
+- **Unresolved:** This cloud environment has no configured VPN or TCP grant to
+  the Pi. SSH setup requires a local Codex session on the LAN or the supported
+  cloud Tailscale integration plus an exact TCP destination grant and SSH key.
+  No firmware installation, AP/service changes or hardware experiments occurred.
+
+RSN advertisement, association acceptance, WPS/rotated keys, GamePad pairing,
+streaming and end-to-end latency remain unproven and outside this implementation.
+Completed Windows experiments were not repeated.

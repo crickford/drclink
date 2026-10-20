@@ -60,7 +60,19 @@ This starts an active radio/trace experiment and is not a required setup step fo
 
 ## Firmware work
 
-No Pi firmware source patch, built firmware artifact, sampler or hardware validation is included. The detailed report contains pinned upstream sources and proposed insertion points only. Do not confuse its string addresses with tested entry points or its staging table with completed tests.
+[tools/pi-tsf](../tools/pi-tsf/README.md) now contains a versioned command ABI,
+minimal Nexmon variant/patch, source audit, host sampler, read-only inventory
+collector, offline checks and build instructions. The prototype was compiled
+and linked locally with pinned GCC 5.4.1, but its actual hardware TSF backend
+is disabled pending ROM/layout/clock-state verification. Built firmware stays
+in the ignored upstream checkout and is not packaged for installation.
+
+See [source review](../tools/pi-tsf/SOURCE_REVIEW.md),
+[validation](../tools/pi-tsf/VALIDATION.md) and
+[Pi provisioning/remote access](PI_SETUP.md). No Pi firmware has been installed,
+no kernel vendor transport or hardware clock has been tested, and no GamePad
+stage has passed. The original firmware research remains a historical
+source-supported assessment; its string addresses are not callable entry points.
 
 ## Handoff validation
 

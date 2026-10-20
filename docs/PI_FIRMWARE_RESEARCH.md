@@ -2,6 +2,13 @@
 
 Research date: 19 October 2026. Scope: Windows 11 supplies compatible encoded media over USB Ethernet; a Raspberry Pi 4 Model B owns its onboard CYW43455/BCM43455c0 radio and directly pairs with and serves a real GamePad. No console, including during pairing, and no additional Wi-Fi adapter. This was source/documentation research only: no firmware was built, patched, installed, or exercised on hardware.
 
+Later implementation note (same local date): a fail-closed ABI prototype has
+since been built locally. The actual hardware reader remains disabled. See
+[the new source review](../tools/pi-tsf/SOURCE_REVIEW.md) and
+[validation record](../tools/pi-tsf/VALIDATION.md); the research findings below
+retain their original evidence status. No firmware has been installed or tested
+on the Pi.
+
 ## Assessment
 
 **A credible firmware research project, but not a demonstrated or ready-to-install solution.** I found no end-to-end demonstration satisfying the onboard-radio constraint. The evidence does not justify declaring it impossible merely because brcmfmac is FullMAC. Existing Linux key-installation paths and patched hostapd can potentially handle the unusual key derivation without reimplementing CCMP inside firmware. The important unverified radio work is authoritative Nintendo RSN advertisement, acceptance of Nintendo association requests, and reliable use of the AP's actual hardware clock.

@@ -6,6 +6,15 @@ Prepare one version-pinned Nexmon patch that exposes a read of the Wi-Fi hardwar
 
 The first goal is to establish that the selected firmware's actual AP clock can be read through a controlled interface with measurable latency. A returned integer alone is insufficient. Loading changed firmware is separate from the fact that the new command itself is read-only.
 
+Implementation update, 19 October 2026: [tools/pi-tsf](../tools/pi-tsf/README.md)
+now contains a locally built, fail-closed ABI prototype, host sampler, offline
+checks and reproducible build instructions. Hardware reads remain disabled:
+the clean ROM reader body, target layout and clock-available predicate are not
+verified. Read the [source review](../tools/pi-tsf/SOURCE_REVIEW.md) before
+attempting the next backend work. The actual Pi target is still unselected.
+Start hardware preparation with [Pi setup](PI_SETUP.md), collect inventory over
+wired Ethernet, and establish SSH access independently of the onboard radio.
+
 ## Obtain the actual device baseline
 
 No Pi output is available yet. Request this inventory from the user's Pi; commands are read-only and may be unavailable on a minimal image. Record missing commands rather than treating their absence as radio incompatibility.

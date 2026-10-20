@@ -1,0 +1,22 @@
+protocol checks passed: lengths, null/unaligned buffers, reserved bytes, cookies, word order, errors, fail-closed backend
+test_fit_known_rate_and_separate_reset_segment (test_tsf.Analysis.test_fit_known_rate_and_separate_reset_segment) ... ok
+test_host_clock_validation_and_empty (test_tsf.Analysis.test_host_clock_validation_and_empty) ... ok
+test_low_word_rollover_is_monotonic_64bit (test_tsf.Analysis.test_low_word_rollover_is_monotonic_64bit) ... ok
+test_reset_repeat_forward_jump_and_failure (test_tsf.Analysis.test_reset_repeat_forward_jump_and_failure) ... ok
+test_wrap_64_is_flagged_without_assuming_a_reset_cause (test_tsf.Analysis.test_wrap_64_is_flagged_without_assuming_a_reset_cause) ... ok
+test_zero_extended_32bit_wrap_is_not_silently_unwrapped (test_tsf.Analysis.test_zero_extended_32bit_wrap_is_not_silently_unwrapped) ... ok
+test_ack_and_response_in_either_order (test_tsf.Netlink.test_ack_and_response_in_either_order) ... ok
+test_attribute_bounds_padding_and_duplicates (test_tsf.Netlink.test_attribute_bounds_padding_and_duplicates) ... ok
+test_nested_vendor_fixture (test_tsf.Netlink.test_nested_vendor_fixture) ... ok
+test_timeout_is_propagated (test_tsf.Netlink.test_timeout_is_propagated) ... ok
+test_golden_word_order (test_tsf.Protocol.test_golden_word_order) ... ok
+test_malformed_and_stale (test_tsf.Protocol.test_malformed_and_stale) ... ok
+test_query_and_backend_failure (test_tsf.Protocol.test_query_and_backend_failure) ... ok
+test_bounds (test_tsf.Sampling.test_bounds) ... ok
+test_fail_closed_and_preserve_existing_log (test_tsf.Sampling.test_fail_closed_and_preserve_existing_log) ... ok
+test_three_malformed_reads_stop_and_retain_raw (test_tsf.Sampling.test_three_malformed_reads_stop_and_retain_raw) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.004s
+
+OK
